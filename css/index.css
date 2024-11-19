@@ -1,24 +1,244 @@
-/* src/index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #141414;
-    color: #fff;
+#banners {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.container-banner1 {
+    width: 100%;
+    height: 100%;
+}
+
+.container-banner1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção da imagem */
+    display: block;
+}
+
+########  CSS BEM VINDO #########################################################
+
+#bem-vindo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #F5E7DA; /* Cor de fundo semelhante ao da imagem */
+    width: 00%;
+}
+
+.container-bem-vindo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaçamento entre a imagem e o texto */
+    max-width: 100%; /* Definir uma largura máxima para o container */
+    width: 100%;
+    margin: 0 auto; /* Centralizar o container */
+    padding: 0 20px; /* Adicionar algum padding lateral */
+    background: #E7E1DF; /* Cor de fundo para garantir consistência */
+}
+
+.banner-bem-vindo {
+    flex: 1; /* Permitir que o banner ocupe o espaço necessário */
+}
+
+.banner-bem-vindo img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Garantir que a imagem se comporte como bloco */
+}
+
+.texto-bem-vindo {
+    flex: 1; /* Permitir que o texto ocupe o espaço necessário */
+    margin-left: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+.texto-bem-vindo h1 {
+    font-size: 35px;
+    color: #A97744; /* Cor de texto semelhante ao da imagem */
+    width: 331px;
+    height: 130px;
+    top: 748px;
+    left: 836px;
+    gap: 0px;
+    opacity: 0px;
+
+    
+}
+
+.texto-bem-vindo h3 {
+    font-size: 18px;
+    color: #3B2416; /* Cor de texto para o subtítulo */
+    width: 216px;
+
+
+}
+
+.texto-bem-vindo p {
+font-family: Archivo;
+font-size: 15px;
+font-weight: 520;
+line-height: 19.2px;
+text-align: justify;
+width: 420px;
+height: 130px;
+padding-left: ;
+
+}
+
+########  CSS VISAO #########################################################
+
+#visao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    background-color: #white; /* Cor de fundo semelhante ao da imagem */
+    width: 100%;
+}
+
+.container-visao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaçamento entre a imagem e o texto */
+    max-width: 100%; /* Definir uma largura máxima para o container */
+    width: 75%;
+    margin: 100px auto; /* Centralizar o container */
+    padding: 0 20px; /* Adicionar algum padding lateral */
+    background: #white; /* Cor de fundo para garantir consistência */
+}
+
+.banner-visao {
+    flex: 1; /* Permitir que o banner ocupe o espaço necessário */
+}
+
+.banner-visao img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Garantir que a imagem se comporte como bloco */
+}
+
+.texto-visao {
+    flex: 1; /* Permitir que o texto ocupe o espaço necessário */
+    margin-left: 300px; /* Espaçamento entre a imagem e o texto */
+}
+    
+}
+
+.texto-visao h3 {
+    font-size: 18px;
+    color: #3B2416; /* Cor de texto para o subtítulo */
+    width: 216px;
+
+
+}
+
+
+########  CSS VIDEO #########################################################
+
+#video-cafe {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    min-height: 100vh;
+    justify-content: center;
+    padding: 50px 0;
+    text-align: center;
+    position: relative; /* Adiciona um contexto de posicionamento para o botão */
+}
 
-    .banner-bem-vindo {
-        float: left;
-        width: 100px;
-    }
-    .texto-bem-vindo{
-        float: right;
-        
-    }
+.banner-video {
+    position: relative; /* Necessário para o posicionamento absoluto do botão */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-video img {
+    max-width: 60%; /* Ajuste conforme necessário */
+    height: auto;
+    display: block;
+}
+
+.texto-video {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Ajustar conforme necessário */
+}
+
+.texto-video h1 {
+    font-family: Archivo, sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 54.4px;
+    color: #A97744; /* Cor de texto para o subtítulo */
+    width: 770px; /* Ajuste conforme necessário */
+}
+.video-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #A97744;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.video-button:hover {
+    background-color: #A97744;
+    color: white;
+}
+
+########  CSS VISAO #########################################################
+
+#banners-secundario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    background-color: #white; /* Cor de fundo semelhante ao da imagem */
+    width: 100%;
+}
+
+.container-visao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaçamento entre a imagem e o texto */
+    max-width: 100%; /* Definir uma largura máxima para o container */
+    width: 75%;
+    margin: 100px auto; /* Centralizar o container */
+    padding: 0 20px; /* Adicionar algum padding lateral */
+    background: #white; /* Cor de fundo para garantir consistência */
+}
+
+.banner-visao {
+    flex: 1; /* Permitir que o banner ocupe o espaço necessário */
+}
+
+.banner-visao img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Garantir que a imagem se comporte como bloco */
+}
+
+.texto-visao {
+    flex: 1; /* Permitir que o texto ocupe o espaço necessário */
+    margin-left: 300px; /* Espaçamento entre a imagem e o texto */
+}
+    
+}
+
+.texto-visao h3 {
+    font-size: 18px;
+    color: #3B2416; /* Cor de texto para o subtítulo */
+    width: 216px;
+
+
+}
