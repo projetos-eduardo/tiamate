@@ -1,103 +1,310 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                'terracota': '#da373d',
-                'mostarda':  '#F7AE1A',
-                'preto-medio': '#292625',
-                'marron-escuro': '#3B2416',
-                'marron-claro': '#A97744',
-                'mude': '#F5E7DA',
-              }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'terracota': '#da373d',
+            'mostarda': '#F7AE1A',
+            'preto-medio': '#292625',
+            'marron-escuro': '#3B2416',
+            'marron-claro': '#A97744',
+            'mude': '#F5E7DA',
           }
         }
-      </script>
-     <link rel="stylesheet" href="header/header.css">
-     <link rel="stylesheet" href="footer/footer.css">
-    <link rel="stylesheet" href="css/index.css">
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="header/header.css">
+  <link rel="stylesheet" href="footer/footer.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
-<body class="bg-ter">
-<header>
-  <div id="header-placeholder"></div>
 
-  <script>
+<body class="bg-ter">
+  <header>
+    <div id="header-placeholder"></div>
+
+    <script>
       // Função para carregar o header
       function loadHeader() {
-          fetch('header/header.html')
-              .then(response => response.text())
-              .then(data => {
-                  document.getElementById('header-placeholder').innerHTML = data;
-              })
-              .catch(error => console.error('Erro ao carregar o header:', error));
+        fetch('header/header.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+          })
+          .catch(error => console.error('Erro ao carregar o header:', error));
       }
-  </script> 
-</header>
-      
-  </script>
-    <main>
-        <section id="banners"></section>
-        <h1>
-          Faça aqui! Banners
-        </h1>
-        <section id="bem-vindo"></section>
-        <h1>
-          Faça aqui! bem-vindo
-        </h1>
-        <section id="valor"></section>
-        <h1></h1>
-          Faça aqui! valor
-        </h1>
-        <section id="video-cafe"></section>
-        <h1></h1>
-          Faça aqui! video-cafe
-        </h1>
-        <section id="banners-secundario"></section>
-        <h1></h1>
-          Faça aqui! banners-secundario
-        </h1>
-        <section id="galeria"></section>
-        <h1></h1>
-          Faça aqui! galeria
-        </h1>
-        <section id="cardapio-carrosel"></section>
-        <h1></h1>
-          Faça aqui! cardapio-carrosel
-        </h1>
-        <section id="cadastro-franquiado"></section>
-        <h1></h1>
-          Faça aqui!  cadastro-franquiado
-        </h1>
-        <section id="depoimentos"></section>
-        <h1></h1>
-          Faça aqui! depoimentos
-        </h1>
-    </main>
+    </script>
+  </header>
 
-    <footer>
-      <div id="footer-placeholder"></div>
-      <script>
-         function loadFooter() {
+  </script>
+  <main>
+    <section id="banners" class="relative w-full h-[30rem]">
+      <img src="./imagens/banner-04.jpg" alt="" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 flex flex-col items-start justify-center p-12">
+        <h1 class="text-white text-3xl sm:text-5xl font-bold mb-6">
+          Mais que sabor, <br>sentimentos!
+        </h1>
+        <div class="social-icons flex gap-5">
+          <img src="./imagens/face.png" alt="">
+          <img src="./imagens/insta.png" alt="">
+          <img src="./imagens/youtube.png" alt="">
+          <img src="./imagens/linkedin.png" alt="">
+        </div>
+      </div>
+    </section>
+    <section id="colheita" class="bg-white flex items-center mt-3 px-12 py-12 gap-8">
+      <div class="colheita-box flex flex-col justify-center text-start w-1/2">
+        <h1 class="text-3xl font-bold mb-4 text-[#A97744]">
+          Colheita
+        </h1>
+        <p class="text-[#3B2416] text-base">
+          A colheita acontece quando a maioria dos frutos já estão maduros. Tudo começa com uma seleção criteriosa das
+          sementes de café. Elas são escolhidas, plantadas e mantidas em viveiros especiais, que darão origem às mudas.
+          <br><br>As plantinhas passam por diversas etapas de crescimento e quando alcançam de quatro a seis pares de
+          folhas
+          em
+          seus galhos, são levadas para os solos que abrigarão o cafezal.
+        </p>
+      </div>
+      <div class="flex justify-center w-1/2">
+        <img src="./imagens/colheita.png" alt="">
+      </div>
+    </section>
+    <section id="torragem" class="bg-[#E7E1DF] flex items-center mt-3 px-12 py-12 gap-8">
+      <div class="flex justify-center w-1/2">
+        <img src="./imagens/torragem.png" alt="">
+      </div>
+      <div class="torragem-box flex flex-col justify-center text-start w-1/2">
+        <h1 class="text-3xl font-bold mb-4 text-[#A97744]">
+          Torragem
+        </h1>
+        <p class="text-[#3B2416] text-base">
+          Este procedimento é todo controlado por operadores à distância. Quando o café alcança a temperatura de 140°C,
+          acontecem interações entre as proteínas, gorduras e açúcares presentes nele.
+          <br><br>Cada café possui uma curva de torra, então, a temperatura e o tempo podem variar. Secos, os grãos
+          descansam por três horas e perdem gás carbônico. Em seguida, estão prontos para serem pesados e armazenados.
+        </p>
+      </div>
+    </section>
+    <section id="moagem" class="bg-white flex items-center mt-3 px-12 py-12 gap-8">
+      <div class="moagem-box flex flex-col justify-center text-start w-1/2">
+        <h1 class="text-3xl font-bold mb-4 text-[#A97744]">
+          Moagem
+        </h1>
+        <p class="text-[#3B2416] text-base">
+          Ela é feita através da combinação de diversos tipos de café. Esta “mistura” varia de acordo com o perfil do
+          consumidor, podendo ser um produto gourmet, que leva toques mais suaves; do tipo forte, que é mais amargo e
+          menos ácido; ou até mesmo aromático, que conta com sabores adicionais.
+          <br><br>
+          A mistura é preparada mecanicamente. Então, ela é encaminhada para um rolo mecânico, que quebrará os grãos,
+          até chegar à granulometria ideal do produto. Depois da moagem, o café deve descansar por três horas para
+          liberar mais gás carbônico.
+        </p>
+      </div>
+      <div class="flex justify-center w-1/2">
+        <img src="./imagens/moagem.png" alt="">
+      </div>
+    </section>
+    <section id="classificacao" class="bg-[#E7E1DF] flex items-center mt-3 px-12 py-12 gap-8">
+      <div class="flex justify-center w-1/2">
+        <img src="./imagens/classificacao.png" alt="">
+      </div>
+      <div class="classificacao-box flex flex-col justify-center text-start w-1/2">
+        <h1 class="text-3xl font-bold mb-4 text-[#A97744]">
+          Classificação
+        </h1>
+        <p class="text-[#3B2416] text-base">
+          Para que os grãos sejam armazenados, eles passam por “testes”, que os classificarão de acordo com a qualidade.
+          Depois de moídos, os grãos são colocados em um aparelho que irá enviar raios infravermelhos ao pó de café.
+          <br><br>
+          De acordo com a luminescência refletida, o produto é classificado em números, que apontam uma variedade mais
+          fraca ou mais forte.
+        </p>
+      </div>
+    </section>
+    <section id="abra-sua-franquia" class="flex flex-row w-full h-auto">
+      <div class="form-contact bg-[#3B2416] flex flex-col justify-center items-center w-1/2 p-8">
+        <form action="" class="flex flex-col w-full max-w-md">
+          <p class="text-[#CF9A5A] text-lg mb-2">Entre em contato</p>
+          <h1 class="text-[#F5E7DA] text-3xl font-bold mb-4">Abra sua Franquia</h1>
+          <p class="text-[#CF9A5A] text-sm mb-6">Preencha o formulário abaixo que entraremos em contato com você o mais
+            rápido
+            possível.</p>
+          <div class="relative mb-4">
+            <span class="absolute top-1/2 -translate-y-1/2 left-3 w-5 h-5 bg-[#C7794A] rounded-full"></span>
+            <input type="text" id="nome" name="nome" placeholder="Nome e Sobrenome:"
+              class="w-full h-[60px] pl-10 pr-4 rounded-sm bg-white text-[#292625] focus:outline-none focus:ring-2 focus:ring-[#C7794A]">
+          </div>
+
+          <div class="relative mb-4">
+            <span class="absolute top-1/2 -translate-y-1/2 left-3 w-5 h-5 bg-[#C7794A] rounded-full"></span>
+            <input type="email" id="email" name="email" placeholder="email@exemplo.com"
+              class="w-full h-[60px] pl-10 pr-4 rounded-sm bg-white text-[#292625] focus:outline-none focus:ring-2 focus:ring-[#C7794A]">
+          </div>
+
+          <div class="relative mb-4">
+            <span class="absolute top-1/2 -translate-y-1/2 left-3 w-5 h-5 bg-[#C7794A] rounded-full"></span>
+            <input type="telefone" id="telefone" name="telefone" placeholder="Telefone com DDD"
+              class="w-full h-[60px] pl-10 pr-4 rounded-sm bg-white text-[#292625] focus:outline-none focus:ring-2 focus:ring-[#C7794A]">
+          </div>
+
+          <button
+            class="w-full h-[60px] bg-[#C7794A] rounded-sm font-bold hover:bg-[#A97744] transition-colors text-#3B2416]">Enviar
+            Cadastro</button>
+
+        </form>
+      </div>
+      <div class="img-abra-sua-franquia w-1/2">
+        <img src="./imagens/abra-sua-franquia.png" alt="" class="w-full h-full object-cover">
+      </div>
+    </section>
+    <section id="depoimentos" class="px-4 md:px-0 py-[60px] md:py-[130px] relative">
+      <h6 class="text-center text-marrom-escuro text-[12px] md:text-[18px]">Depoimentos</h6>
+      <h2 class="text-center text-[#A97744] text-[24px] md:text-[50px] font-bold">Tudo sobre Tiamate Coffee
+      </h2>
+      <img class="hidden md:block md:mt-[40px]" src="./imagens/bg-depoimentos.png" alt="rapaz-servindo-café" />
+      <div
+        class="overflow-hidden mt-[60px] relative md:absolute md:top-1/2 md:right-0 md:w-[70%] transform md:-translate-y-1/2">
+        <ul id="carrossel" class="flex gap-6 transition-transform duration-300 ease-in-out"
+          style="transform: translateX(0);">
+          <li class="bg-[#E7E1DF] flex-shrink-0 w-[350px] md:w-[400px] rounded-[7px] px-6 py-12">
+            <div class="flex gap-[4px] mb-4">
+              <img src="imagens/icon_star.png" alt="estrela" />
+              <img src="imagens/icon_star.png" alt="estrela" />
+              <img src="imagens/icon_star.png" alt="estrela" />
+              <img src="imagens/icon_star.png" alt="estrela" />
+              <img src="imagens/icon_star.png" alt="estrela" />
+            </div>
+            <p class="text-marrom-escuro text-[14px] mb-3">
+              O café é realmente bom, e os salgados também (pedi um croissant de 4 queijos). Já havia pedido antes via
+              iFood mas resolvi fazer uma visita enquanto andava pelo Centro, o café fica mesmo ao lado da Praça do
+              Ferreira. Vale a pena dar uma visitada quando quiser se refrescar com um café gelado deles ou tomar um
+              café da manhã por lá.
+            </p>
+            <div class="flex items-center gap-4">
+              <img src="imagens/depoimento1.png" alt="Kalil Sousa" class="w-10 h-10 rounded-full" />
+              <h6 class="text-terracota font-semibold">Kalil Sousa</h6>
+            </div>
+          </li>
+          <li class="bg-[#E7E1DF] flex-shrink-0 w-[350px] md:w-[400px] rounded-[7px] px-6 py-12">
+            <div class="flex gap-[4px] mb-4">
+              <img src="imagens/icon_star.png" alt="estrela" />
+              <img src="imagens/icon_star.png" alt="estrela" />
+              <img src="imagens/icon_star.png" alt="estrela" />
+              <img src="imagens/icon_star.png" alt="estrela" />
+              <img src="imagens/icon_star.png" alt="estrela" />
+            </div>
+            <p class="text-marrom-escuro text-[14px] mb-3">
+              O café é realmente bom, e os salgados também (pedi um croissant de 4 queijos). Já havia pedido antes via
+              iFood mas resolvi fazer uma visita enquanto andava pelo Centro, o café fica mesmo ao lado da Praça do
+              Ferreira. Vale a pena dar uma visitada quando quiser se refrescar com um café gelado deles ou tomar um
+              café da manhã por lá.
+            </p>
+            <div class="flex items-center gap-4">
+              <img src="imagens/depoimento2.png" alt="Kalil Sousa" class="w-10 h-10 rounded-full" />
+              <h6 class="text-terracota font-semibold">Kalil Sousa</h6>
+            </div>
+          </li>
+          <li class="bg-[#E7E1DF] flex-shrink-0 w-[350px] md:w-[400px] rounded-[7px] px-6 py-12">
+            <div class="flex gap-[4px] mb-4">
+              <img src="imagens/icon_star.png" alt="estrela" />
+              <img src="imagens/icon_star.png" alt="estrela" />
+              <img src="imagens/icon_star.png" alt="estrela" />
+              <img src="imagens/icon_star.png" alt="estrela" />
+              <img src="imagens/icon_star.png" alt="estrela" />
+            </div>
+            <p class="text-marrom-escuro text-[14px] mb-3">
+              Excelente café no Centro da cidade.
+              Vale a pena uma passará para quem
+              estiver passando pela região.
+            </p>
+            <div class="flex items-center gap-4">
+              <img src="imagens/depoimento3.png" alt="Kalil Sousa" class="w-10 h-10 rounded-full" />
+              <h6 class="text-terracota font-semibold">Kalil Sousa</h6>
+            </div>
+          </li>
+          <li class="bg-[#E7E1DF] flex-shrink-0 w-[350px] md:w-[400px] rounded-[7px] px-6 py-12">
+            <div class="flex gap-[4px] mb-4">
+              <img src="imagens/icon_star.png" alt="estrela" />
+              <img src="imagens/icon_star.png" alt="estrela" />
+              <img src="imagens/icon_star.png" alt="estrela" />
+              <img src="imagens/icon_star.png" alt="estrela" />
+              <img src="imagens/icon_star.png" alt="estrela" />
+            </div>
+            <p class="text-marrom-escuro text-[14px] mb-3">
+              Ótimo lugar para descansar tomando aquele café, cappuccino, matte, tiamatte...😍 meu refúgio de descanso
+              em meio ao turbulento centro de Fortal City! rs
+            </p>
+            <div class="flex items-center gap-4">
+              <img src="imagens/depoimento1.png" alt="Kalil Sousa" class="w-10 h-10 rounded-full" />
+              <h6 class="text-terracota font-semibold">Kalil Sousa</h6>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Controles -->
+      <div class="flex justify-center gap-4 mt-6">
+        <button id="prev"
+          class="w-[45px] h-[45px] bg-[#A97744] hover:bg-[#8c6138] text-white rounded-full flex items-center justify-center">
+          &#8249;
+        </button>
+        <button id="next"
+          class="w-[45px] h-[45px] bg-[#A97744] hover:bg-[#8c6138] text-white rounded-full flex items-center justify-center">
+          &#8250;
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="footer-placeholder"></div>
+    <script>
+      function loadFooter() {
         fetch('footer/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error('Erro ao carregar o footer:', error));
-    }
-    window.onload = function() {
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+          })
+          .catch(error => console.error('Erro ao carregar o footer:', error));
+      }
+      window.onload = function () {
         loadHeader();
         loadFooter();
-    };
-      </script>
-    </footer>
+      };
+    </script>
+  </footer>
 </body>
+
+<script>
+  const carrossel = document.getElementById("carrossel");
+  const prev = document.getElementById("prev");
+  const next = document.getElementById("next");
+  const cardWidth = 300 + 24; // Ancho del card + gap
+  let position = 0;
+
+  prev.addEventListener("click", () => {
+    if (position < 0) {
+      position += cardWidth;
+      carrossel.style.transform = `translateX(${position}px)`;
+    }
+  });
+
+  next.addEventListener("click", () => {
+    if (Math.abs(position) < (carrossel.scrollWidth - carrossel.clientWidth)) {
+      position -= cardWidth;
+      carrossel.style.transform = `translateX(${position}px)`;
+    }
+  });
+</script>
+
+
 </html>
