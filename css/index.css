@@ -1,4 +1,21 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 
+}
+
+/* Header */
+#header-placeholder {
+    width: 100%;
+}
+
+/* Footer */
+#footer-placeholder {
+    width: 100%;
+}
+
+/* Banners */
 #banners {
     width: 100%;
     overflow: hidden;
@@ -17,30 +34,33 @@
     display: block;
 }
 
-########  CSS BEM VINDO #########################################################
-
+/* Bem-vindo Section */
 #bem-vindo {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px 0;
-    background-color: #F5E7DA; /* Cor de fundo semelhante ao da imagem */
-    width: 00%;
+    background-color:  #E7E1DF;
+    ; /* Cor de fundo semelhante ao da imagem */
+    width: 100%;
 }
 
 .container-bem-vindo {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Espaçamento entre a imagem e o texto */
-    max-width: 100%; /* Definir uma largura máxima para o container */
+    max-width: 1200px; /* Definir uma largura máxima para o container */
     width: 100%;
     margin: 0 auto; /* Centralizar o container */
     padding: 0 20px; /* Adicionar algum padding lateral */
-    background: #E7E1DF; /* Cor de fundo para garantir consistência */
+    background: #E7E1DF;
+    ; /* Cor de fundo para garantir consistência */
+    flex-wrap: wrap; /* Permitir que os itens quebrem linha em telas menores */
 }
 
 .banner-bem-vindo {
     flex: 1; /* Permitir que o banner ocupe o espaço necessário */
+    margin-bottom: 20px; /* Espaçamento inferior para telas menores */
 }
 
 .banner-bem-vindo img {
@@ -55,46 +75,33 @@
 }
 
 .texto-bem-vindo h1 {
-    font-size: 35px;
+    font-size: 2em;
     color: #A97744; /* Cor de texto semelhante ao da imagem */
-    width: 331px;
-    height: 130px;
-    top: 748px;
-    left: 836px;
-    gap: 0px;
-    opacity: 0px;
-
-    
 }
 
 .texto-bem-vindo h3 {
-    font-size: 18px;
+    font-size: 1.2em;
     color: #3B2416; /* Cor de texto para o subtítulo */
-    width: 216px;
-
-
 }
 
 .texto-bem-vindo p {
-font-family: Archivo;
-font-size: 15px;
-font-weight: 520;
-line-height: 19.2px;
-text-align: justify;
-width: 420px;
-height: 130px;
-padding-left: ;
-
+    font-family: Archivo, sans-serif;
+    font-size: 1em;
+    font-weight: 520;
+    line-height: 1.6em;
+    text-align: justify;
+    color: #3B2416;
+    margin-top: 5%
+;
 }
 
-########  CSS VISAO #########################################################
-
-#visao {
+/* Visão Section */
+#valor {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 100px 0;
-    background-color: #white; /* Cor de fundo semelhante ao da imagem */
+    background-color: white;
     width: 100%;
 }
 
@@ -102,15 +109,17 @@ padding-left: ;
     display: flex;
     align-items: center;
     justify-content: space-between; /* Espaçamento entre a imagem e o texto */
-    max-width: 100%; /* Definir uma largura máxima para o container */
-    width: 75%;
-    margin: 100px auto; /* Centralizar o container */
+    max-width: 1200px; /* Definir uma largura máxima para o container */
+    width: 100%;
+    margin: 0 auto; /* Centralizar o container */
     padding: 0 20px; /* Adicionar algum padding lateral */
-    background: #white; /* Cor de fundo para garantir consistência */
+    background: white; /* Cor de fundo para garantir consistência */
+    flex-wrap: wrap; /* Permitir que os itens quebrem linha em telas menores */
 }
 
 .banner-visao {
     flex: 1; /* Permitir que o banner ocupe o espaço necessário */
+    margin-bottom: 20px; /* Espaçamento inferior para telas menores */
 }
 
 .banner-visao img {
@@ -121,22 +130,16 @@ padding-left: ;
 
 .texto-visao {
     flex: 1; /* Permitir que o texto ocupe o espaço necessário */
-    margin-left: 300px; /* Espaçamento entre a imagem e o texto */
-}
-    
+    margin-left: 20px; /* Espaçamento entre a imagem e o texto */
 }
 
 .texto-visao h3 {
-    font-size: 18px;
+    font-size: 1.2em;
     color: #3B2416; /* Cor de texto para o subtítulo */
-    width: 216px;
-
-
 }
 
 
-########  CSS VIDEO #########################################################
-
+/* Vídeo Café Section */
 #video-cafe {
     display: flex;
     flex-direction: column;
@@ -144,66 +147,59 @@ padding-left: ;
     justify-content: center;
     padding: 50px 0;
     text-align: center;
-    position: relative; /* Adiciona um contexto de posicionamento para o botão */
+    background-color: white;
 }
 
 .banner-video {
-    position: relative; /* Necessário para o posicionamento absoluto do botão */
-    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .banner-video img {
-    max-width: 60%; /* Ajuste conforme necessário */
+    max-width: 80%; /* Ajuste conforme necessário */
     height: auto;
     display: block;
 }
 
 .texto-video {
-    width: 80%;
-    display: flex;
-    justify-content: center;
+    width: 40%;
     margin-bottom: 20px; /* Ajustar conforme necessário */
 }
 
 .texto-video h1 {
     font-family: Archivo, sans-serif;
-    font-size: 50px;
+    font-size: 2em;
     font-weight: 700;
-    line-height: 54.4px;
     color: #A97744; /* Cor de texto para o subtítulo */
-    width: 770px; /* Ajuste conforme necessário */
 }
+
 .video-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #A97744;
-    padding: 10px 20px;
+    background-color: #CF9A5A;
+    color: #f8f5f1;
+    padding: 10px 30px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1em;
     transition: background-color 0.3s;
+    margin-top: 14px; /* Ajuste conforme necessário */
 }
 
 .video-button:hover {
     background-color: #A97744;
-    color: white;
+    color: rgb(214, 196, 196);
 }
 
-########  CSS VISAO #########################################################
-
+/* Banners Secundários */
 #banners-secundario {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 100px 0;
-    background-color: #white; /* Cor de fundo semelhante ao da imagem */
+    background-color: white;
     width: 100%;
 }
 
@@ -211,15 +207,17 @@ padding-left: ;
     display: flex;
     align-items: center;
     justify-content: space-between; /* Espaçamento entre a imagem e o texto */
-    max-width: 100%; /* Definir uma largura máxima para o container */
-    width: 75%;
-    margin: 100px auto; /* Centralizar o container */
+    max-width: 1200px; /* Definir uma largura máxima para o container */
+    width: 100%;
+    margin: 0 auto; /* Centralizar o container */
     padding: 0 20px; /* Adicionar algum padding lateral */
-    background: #white; /* Cor de fundo para garantir consistência */
+    background: white; /* Cor de fundo para garantir consistência */
+    flex-wrap: wrap; /* Permitir que os itens quebrem linha em telas menores */
 }
 
 .banner-visao {
     flex: 1; /* Permitir que o banner ocupe o espaço necessário */
+    margin-bottom: 20px; /* Espaçamento inferior para telas menores */
 }
 
 .banner-visao img {
@@ -230,15 +228,81 @@ padding-left: ;
 
 .texto-visao {
     flex: 1; /* Permitir que o texto ocupe o espaço necessário */
-    margin-left: 300px; /* Espaçamento entre a imagem e o texto */
-}
-    
+    margin-left: 20px; /* Espaçamento entre a imagem e o texto */
 }
 
 .texto-visao h3 {
-    font-size: 18px;
+    font-size: 1.2em;
     color: #3B2416; /* Cor de texto para o subtítulo */
-    width: 216px;
+}
 
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container-bem-vindo, .container-visao {
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .banner-bem-vindo, .banner-visao, .texto-bem-vindo, .texto-visao {
+        margin-left: 0;
+    }
+
+    .texto-bem-vindo, .texto-visao {
+        margin-top: 20px;
+        
+    }
+
+    .texto-video h1 {
+        font-size: 1.5em;
+    }
+
+    .video-button {
+        font-size: 0.9em;
+    }
+}
+
+/* banner 3 */
+
+/* Container geral que vai envolver a imagem e o texto */
+.container-banner-3 {
+    display: flex;
+    justify-content: space-between;
+    position: relative; /* Necessário para posicionar os elementos internos */
+    width: 100%;
+    height: 500px; /* Ajuste a altura conforme necessário */
+}
+
+/* Estilos do texto que ficará na frente da imagem */
+.banner-banner-3 {
+    position: absolute; /* Isso vai colocar o texto sobre a imagem */
+    top: 50%;  /* Centraliza verticalmente o texto */
+    left: 50%;  /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para o verdadeiro centro */
+    color: white;  /* Cor do texto */
+    text-align: center;  /* Centraliza o texto */
+}
+
+/* Título "Café Autêntico" */
+.banner-3-1 {
+    font-family: Archivo, sans-serif;
+    font-size: 50px;  /* Ajuste o tamanho conforme necessário */
+    font-weight: 700;
+    color: #C7794A;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo do banner */
+.banner-3-2 {
+    font-family: Archivo, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: #F5E7DA;
+}
+
+/* Estilo da imagem que será o fundo */
+.imagem-banner-3 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra toda a área sem distorção */
+    opacity: 0.5;  /* Ajuste a opacidade da imagem, se necessário, para destacar o texto */
 }
