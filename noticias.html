@@ -1,103 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                'terracota': '#da373d',
-                'mostarda':  '#F7AE1A',
-                'preto-medio': '#292625',
-                'marron-escuro': '#3B2416',
-                'marron-claro': '#A97744',
-                'mude': '#F5E7DA',
-              }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notícias</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'terracota': '#da373d',
+            'mostarda': '#F7AE1A',
+            'preto-medio': '#292625',
+            'marron-escuro': '#3B2416',
+            'marron-claro': '#A97744',
+            'mude': '#F5E7DA',
           }
         }
-      </script>
-     <link rel="stylesheet" href="header/header.css">
-     <link rel="stylesheet" href="footer/footer.css">
-    <link rel="stylesheet" href="css/index.css">
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="header/header.css">
+  <link rel="stylesheet" href="footer/footer.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
-<body class="bg-ter">
-<header>
-  <div id="header-placeholder"></div>
 
-  <script>
+<body class="bg-ter">
+  <header>
+    <div id="header-placeholder"></div>
+
+    <script>
       // Função para carregar o header
       function loadHeader() {
-          fetch('header/header.html')
-              .then(response => response.text())
-              .then(data => {
-                  document.getElementById('header-placeholder').innerHTML = data;
-              })
-              .catch(error => console.error('Erro ao carregar o header:', error));
+        fetch('header/header.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+          })
+          .catch(error => console.error('Erro ao carregar o header:', error));
       }
-  </script> 
-</header>
-      
-  </script>
-    <main>
-        <section id="banners"></section>
-        <h1>
-          Faça aqui! Banners
-        </h1>
-        <section id="bem-vindo"></section>
-        <h1>
-          Faça aqui! bem-vindo
-        </h1>
-        <section id="valor"></section>
-        <h1></h1>
-          Faça aqui! valor
-        </h1>
-        <section id="video-cafe"></section>
-        <h1></h1>
-          Faça aqui! video-cafe
-        </h1>
-        <section id="banners-secundario"></section>
-        <h1></h1>
-          Faça aqui! banners-secundario
-        </h1>
-        <section id="galeria"></section>
-        <h1></h1>
-          Faça aqui! galeria
-        </h1>
-        <section id="cardapio-carrosel"></section>
-        <h1></h1>
-          Faça aqui! cardapio-carrosel
-        </h1>
-        <section id="cadastro-franquiado"></section>
-        <h1></h1>
-          Faça aqui!  cadastro-franquiado
-        </h1>
-        <section id="depoimentos"></section>
-        <h1></h1>
-          Faça aqui! depoimentos
-        </h1>
-    </main>
+    </script>
+  </header>
 
-    <footer>
-      <div id="footer-placeholder"></div>
-      <script>
-         function loadFooter() {
+  </script>
+  <main>
+    <section id="banners"></section>
+    <h1>
+      Faça aqui! Banners
+    </h1>
+    <section id="bem-vindo"></section>
+    <h1>
+      Faça aqui! bem-vindo
+    </h1>
+    <section id="valor"></section>
+    <h1></h1>
+    Faça aqui! valor
+    </h1>
+    <section id="video-cafe"></section>
+    <h1></h1>
+    Faça aqui! video-cafe
+    </h1>
+    <section id="banners-secundario"></section>
+    <h1></h1>
+    Faça aqui! banners-secundario
+    </h1>
+    <section id="galeria"></section>
+    <h1></h1>
+    Faça aqui! galeria
+    </h1>
+    <section id="cardapio-carrosel"></section>
+    <h1></h1>
+    Faça aqui! cardapio-carrosel
+    </h1>
+    <section id="cadastro-franquiado"></section>
+    <h1></h1>
+    Faça aqui! cadastro-franquiado
+    </h1>
+    <section id="depoimentos"></section>
+    <h1></h1>
+    Faça aqui! depoimentos
+    </h1>
+  </main>
+
+  <footer>
+    <div id="footer-placeholder"></div>
+    <script>
+      function loadFooter() {
         fetch('footer/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error('Erro ao carregar o footer:', error));
-    }
-    window.onload = function() {
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+          })
+          .catch(error => console.error('Erro ao carregar o footer:', error));
+      }
+      window.onload = function () {
         loadHeader();
         loadFooter();
-    };
-      </script>
-    </footer>
+      };
+    </script>
+  </footer>
 </body>
+
 </html>
