@@ -22,3 +22,38 @@ margin: 0;
         float: right;
         
     }
+
+    .bem-vindo{ 
+        width: 503px;
+        height: 124px;
+        top: 260px;
+        left: 133px;
+        gap: 0px;
+        opacity: 0px;
+        font-family: Archivo;
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 59.84px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+    
+      .fotos-de-unidades{
+        display: flex;
+      }
+
+      .endereço{
+        margin: 0;
+            height: 20vh;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;  */
+      }
+
+
+
+
+
+
+    
